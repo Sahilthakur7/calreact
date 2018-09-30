@@ -1,1 +1,17 @@
-<%=react_component('Appointments')%>
+<h1>Appointments Page</h1>
+
+<%= form_for (@appointment), remote: true do |f|%>
+    <%=f.label :title%>
+    <%=f.text_field :title%>
+    <%=f.label :time%>
+    <%=f.text_field :appointment_time%>
+    <%=f.submit "Submit"%>
+<%end%>
+
+
+<h3>All Appointments:</h3>
+
+<div id="appointments">
+    <%=render 'appointments'%>
+</div>
+
